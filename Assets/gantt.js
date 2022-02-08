@@ -28,6 +28,8 @@ KB.on("dom.ready", function () {
         view_modes: allowed_view_modes,
         view_mode: default_view_mode,
         date_format: "YYYY-MM-DD",
+		bar_height: 40,
+		popup_trigger: 'mouseover',
         custom_popup_html: function (task) {
           function format_date(oDate) {
             if (oDate.getHours() === 0 && oDate.getMinutes() === 0) {
@@ -69,7 +71,7 @@ KB.on("dom.ready", function () {
         language: jQuery("html").attr("lang"),
         on_click: function (task) {
           //console.log(task);
-          window.open(task.url);
+          //window.open(task.url);
         },
         on_date_change: function (task, start, end) {
           console.log(task, start, end);
